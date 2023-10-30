@@ -1,0 +1,35 @@
+.prod-form { 
+    padding-left: 40%;
+    padding-top: 5%;
+    font-size: large;
+}
+
+.prod-input {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid black;
+    width: 300px;
+}
+
+#prod-submit {
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    width: 320px;
+}
+
+.invalid-input{
+    color: red;
+    display: block;
+    margin: 10px 20px;
+    font-weight: 500;
+}

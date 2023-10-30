@@ -1,0 +1,16 @@
+.product-list-div{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.product-list{
+    margin: 0;
+}
+
+.product-list-item{
+    display: inline-block;
+    border: 1px solid black;
+    padding: 5px;
+    width: 10vw;
+    height: 30px;
+}
