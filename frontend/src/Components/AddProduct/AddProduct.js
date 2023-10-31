@@ -36,7 +36,8 @@ const AddProduct = () => {
 
   return (
     <div className="prod-form">
-      <h1>Add Content</h1>
+      <h1 className="heading">Add Content</h1>
+      <div className="inputBox">
       <input
         type="text"
         placeholder="Enter Title"
@@ -49,7 +50,9 @@ const AddProduct = () => {
       ) : (
         <></>
       )}
+      </div>
 
+      <div className="inputBox">
       <input
         type="text"
         placeholder="Enter Category"
@@ -62,7 +65,9 @@ const AddProduct = () => {
       ) : (
         <></>
       )}
+      </div>
 
+      <div className="inputBox">
       <input
         type="textarea"
         placeholder="Enter Content"
@@ -75,9 +80,10 @@ const AddProduct = () => {
       ) : (
         <></>
       )}
+      </div>
       <input
         type="button"
-        value="Add Product"
+        value="Publish Content"
         id="prod-submit"
         onClick={prodSubmit}
       />
