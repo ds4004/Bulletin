@@ -24,15 +24,11 @@
 }
 
 input[type="text"],
-input[type="textarea"] {
+textarea {
     padding: 10px;
     width: 400px;
     max-width: 400px;
     box-sizing: border-box;
-}
-
-input[type="textarea"] {
-    height: 7rem;
 }
 
 .prod-input,
@@ -67,8 +63,12 @@ input[type="textarea"] {
     }
 
     input[type="text"],
-    input[type="textarea"],
+    textarea,
     #prod-submit {
+        width: 250px;
+        font-size: small;
+    }
+    .prod-input{
         width: 250px;
         font-size: small;
     }

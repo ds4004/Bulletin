@@ -68,18 +68,19 @@ const AddProduct = () => {
       </div>
 
       <div className="inputBox">
-      <input
-        type="textarea"
+      <textarea
+        rows="4"
         placeholder="Enter Content"
         className="prod-input"
         value={content}
         onChange={(e) => setContent(e.target.value)}
-      />
+      >
       {error && !content ? (
         <span className="invalid-input">Enter valid content</span>
       ) : (
         <></>
       )}
+      </textarea>
       </div>
       <input
         type="button"
