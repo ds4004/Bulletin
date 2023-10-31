@@ -3,42 +3,42 @@ import { Link } from "react-router-dom";
 import "./ProductList.css";
 
 const ProductList = () => {
-  const [products, setProducts] = useState([]);
+  const [contents, setContent] = useState([]);
 
   useEffect(() => {
-    getProducts();
+    getContent();
   }, []);
 
-  const getProducts = async () => {
-    let result = await fetch(`https://e-dashboard-api.vercel.app/products`);
+  const getContent = async () => {
+    let result = await fetch(`http://localhost:5000/contents`);
     result = await result.json();
-    setProducts(result);
+    setContent(result);
   };
-  console.log(products);
+  console.log(contents);
 
-  const deleteProduct = async (id) => {
-    let result = await fetch(`https://e-dashboard-api.vercel.app/product/${id}`, {
+  const deleteContent = async (id) => {
+    let result = await fetch(`http://localhost:5000/deleteContent/${id}`, {
       method: "Delete"
     });
     result = result.json();
     if (result) {
       alert("Item deleted");
-      getProducts();
+      getContent();
     }
   };
 
   return (
     <div className="product-list-div">
-      <h1>Product List</h1>
+      <h1>Content List</h1>
       <ul className="cards">
-      {products.length > 0 ? products.map((item, index) =>
+      {contents.length > 0 ? contents.map((item, index) =>
         <li className="product-list" key={item._id}>
         <div className="card">
         <div className="card_content">
           <h2 classNmae="card_title">{item.title}</h2>
           <h4 className="posted_by">{item.category}</h4>
           <p className="card_text">{item.content}</p>
-          <input type="button" value="DELETE" className="del-button" onClick={() => deleteProduct(item._id)} />
+          <input type="button" value="DELETE" className="del-button" onClick={() => deleteContent(item._id)} />
           <Link to={"/update/" + item._id}>Update</Link>
         </div>
         </div>
