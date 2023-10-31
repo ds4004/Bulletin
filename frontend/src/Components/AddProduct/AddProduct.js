@@ -84,7 +84,7 @@ const AddProduct = () => {
       </div>
       <input
         type="button"
-        value="Publish Content"
+        value="Publish Post"
         id="prod-submit"
         onClick={prodSubmit}
       />

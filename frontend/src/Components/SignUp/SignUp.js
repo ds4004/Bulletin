@@ -38,25 +38,33 @@ const SignUp = () => {
   
   return (
     <div className="reg-form">
-      <h1>Register</h1>
+      <h1 className="heading">Sign Up</h1>
+      <div className="inputBox">
       <input
         type="text"
         placeholder="Enter Name"
         onChange={(e) => setName(e.target.value)}
         className="reg-input"
       />
+      </div>
+
+      <div className="inputBox">
       <input
         type="email"
         placeholder="Enter Email"
         onChange={(e) => setEmail(e.target.value)}
         className="reg-input"
       />
+      </div>
+      
+      <div className="inputBox">
       <input
         type="password"
         placeholder="Enter Password"
         onChange={(e) => setPassword(e.target.value)}
         className="reg-input"
       />
+      </div>
       <input type="button" value="Register" id="reg-submit" onClick={check} />
     </div>
   );

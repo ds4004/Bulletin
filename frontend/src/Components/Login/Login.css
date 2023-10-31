@@ -1,28 +1,80 @@
-.signin-form { 
-    padding-left: 40%;
-    padding-top: 5%;
+:root {
+    --color: #000000;
+}
+
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
     font-size: large;
 }
 
-.signin-input {
-    display: block;
+.heading {
+    color: var(--color);
+    margin-bottom: 15px;
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8px 0;
+    position: relative;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
     padding: 10px;
-    margin: 10px;
+    width: 350px;
+    max-width: 350px;
+    box-sizing: border-box;
+}
+
+.signin-input,
+#signin-submit {
     font-size: 18px;
     border-radius: 5px;
     border: 2px solid black;
-    width: 300px;
+    padding: 10px;
+    margin: 5px;
+    width: 350px;
+    max-width: 350px;
+    box-sizing: border-box;
 }
 
 #signin-submit {
     cursor: pointer;
-    display: block;
-    padding: 10px;
-    margin: 10px;
-    font-size: 18px;
-    border-radius: 5px;
     background-color: black;
     color: white;
-    border: 2px solid white;
-    width: 320px;
+    border: 5px solid white;
+    height: 50px;
+}
+
+@media (max-width: 768px) {
+
+    .signin-form {
+        font-size: small;
+        padding: 5px;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="text"],
+    #signin-submit {
+        width: 250px;
+        font-size: small;
+    }
+
+    #signin-submit {
+        height: 45px;
+        font-size: medium;
+    }
+
+    .signin-input {
+        width: 250px;
+        font-size: small;
+        margin: 2px;
+    }
 }

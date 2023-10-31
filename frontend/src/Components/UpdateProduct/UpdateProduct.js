@@ -41,8 +41,8 @@ const UpdateProduct = () => {
 
     return (
         <div className="prod-form">
-            <h1>Update Content</h1>
-
+            <h1 className="heading">Update Post</h1>
+            <div className="inputBox">
             <input
                 type="text"
                 placeholder="Enter Title"
@@ -50,7 +50,9 @@ const UpdateProduct = () => {
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
             />
+            </div>
 
+            <div className="inputBox">
             <input
                 type="text"
                 placeholder="Enter Category"
@@ -58,18 +60,21 @@ const UpdateProduct = () => {
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
             />
+            </div>
 
-            <input
-                type="textarea"
+            <div className="inputBox">
+            <textarea
+                rows="4"
                 placeholder="Enter Content"
                 className="prod-input"
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
             />
+            </div>
 
             <input
                 type="button"
-                value="Update Product"
+                value="Update Post"
                 id="prod-submit"
                 onClick={updateProd}
             />
