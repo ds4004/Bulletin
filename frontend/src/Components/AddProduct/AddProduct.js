@@ -2,24 +2,25 @@ import React, { useState } from "react";
 import "./AddProduct.css";
 
 const AddProduct = () => {
-  const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
+  const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
-  const [company, setCompany] = useState("");
+  const [content, setContent] = useState("");
   const [error, setError] = useState(false);
+
   const prodSubmit = async () => {
-    if (!name || !price || !category || !company) {
+    if (!title || !content || !category) {
       setError(true);
       return false;
     }
-    // console.warn(name, price, category, company);
+    // console.warn(title, category, content);
 
     let userId = JSON.parse(localStorage.getItem("user"));
     console.log(userId._id);
     userId = userId._id;
-    let result = await fetch("https://e-dashboard-api.vercel.app/addProduct", {
+
+    let result = await fetch("http://localhost:5000/addContent", {
       method: "POST",
-      body: JSON.stringify({ name, price, category, userId, company }),
+      body: JSON.stringify({ title, category, content, userId }),
       headers: {
         "Content-Type": "application/json",
       },
@@ -27,61 +28,50 @@ const AddProduct = () => {
     result = await result.json();
     console.log(result);
 
-    setName("");
-    setPrice("");
+    setTitle("");
     setCategory("");
-    setCompany("");
-    console.log(name);
+    setContent("");
+    console.log(title);
   };
 
   return (
     <div className="prod-form">
-      <h1>Add Product</h1>
+      <h1>Add Content</h1>
       <input
         type="text"
-        placeholder="Enter product name"
+        placeholder="Enter Title"
         className="prod-input"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
       />
-      {error && !name ? (
-        <span className="invalid-input">Enter valid name</span>
+      {error && !title ? (
+        <span className="invalid-input">Enter valid title</span>
       ) : (
         <></>
       )}
+
       <input
         type="text"
-        placeholder="Enter product price"
-        className="prod-input"
-        value={price}
-        onChange={(e) => setPrice(e.target.value)}
-      />
-      {error && !price ? (
-        <span className="invalid-input">Enter valid price</span>
-      ) : (
-        <></>
-      )}
-      <input
-        type="text"
-        placeholder="Enter product category name"
+        placeholder="Enter Category"
         className="prod-input"
         value={category}
         onChange={(e) => setCategory(e.target.value)}
       />
       {error && !category ? (
-        <span className="invalid-input">Enter valid category</span>
+        <span className="invalid-input">Enter category</span>
       ) : (
         <></>
       )}
+
       <input
-        type="text"
-        placeholder="Enter product company name"
+        type="textarea"
+        placeholder="Enter Content"
         className="prod-input"
-        value={company}
-        onChange={(e) => setCompany(e.target.value)}
+        value={content}
+        onChange={(e) => setContent(e.target.value)}
       />
-      {error && !company ? (
-        <span className="invalid-input">Enter valid company</span>
+      {error && !content ? (
+        <span className="invalid-input">Enter valid content</span>
       ) : (
         <></>
       )}

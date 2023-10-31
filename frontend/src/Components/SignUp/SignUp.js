@@ -19,7 +19,7 @@ const SignUp = () => {
   const check = async () => {
     console.log(name, email, password);
 
-    let result = await fetch("https://e-dashboard-api.vercel.app/register", {
+    let result = await fetch("https://localhost:5000/register", {
       method: "POST",
       body: JSON.stringify({ name, email, password }),
       headers: {

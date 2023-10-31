@@ -1,11 +1,10 @@
-import React, {useEffect, useState} from "react";
-import {useNavigate, useParams} from "react-router-dom"
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom"
 
 const UpdateProduct = () => {
-    const [name, setName] = useState('');
-    const [price, setPrice] = useState('');
-    const [category, setCategory] = useState('');
-    const [company, setCompany] = useState('');
+    const [title, setTitle] = useState("");
+    const [category, setCategory] = useState("");
+    const [content, setContent] = useState("");
     const params = useParams();
     const Navigate = useNavigate();
 
@@ -14,23 +13,22 @@ const UpdateProduct = () => {
     }, []);
 
     const getProductDetails = async () => {
-        let result = await fetch(`https://e-dashboard-api.vercel.app/product/${params.id}`);
+        let result = await fetch(`https://localhost:5000/content/${params.id}`);
         result = await result.json();
         // console.log(result);
 
-        setName(result.name);
-        setPrice(result.price);
+        setTitle(result.title);
         setCategory(result.category);
-        setCompany(result.company);
+        setContent(result.content);
     }
 
     const updateProd = async () => {
-        console.log(name, price, category, company);
+        console.log(title, category, content);
 
-        let result = await fetch(`https://e-dashboard-api.vercel.app/product/${params.id}`, {
+        let result = await fetch(`https://localhost:5000/content/${params.id}`, {
             method: "PUT",
-            body: JSON.stringify({name, price, category, company}),
-            headers:{
+            body: JSON.stringify({ title, category, content }),
+            headers: {
                 "Content-Type": "application/json",
             },
         });
@@ -40,38 +38,35 @@ const UpdateProduct = () => {
 
         Navigate("/");
     };
-    
+
     return (
         <div className="prod-form">
-            <h1>Update Product</h1>
+            <h1>Update Content</h1>
+
             <input
                 type="text"
-                placeholder="Enter product name"
+                placeholder="Enter Title"
                 className="prod-input"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
             />
+
             <input
                 type="text"
-                placeholder="Enter product price"
-                className="prod-input"
-                value={price}
-                onChange={(e) => setPrice(e.target.value)}
-            />
-            <input
-                type="text"
-                placeholder="Enter product category name"
+                placeholder="Enter Category"
                 className="prod-input"
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
             />
+
             <input
-                type="text"
-                placeholder="Enter product company name"
+                type="textarea"
+                placeholder="Enter Content"
                 className="prod-input"
-                value={company}
-                onChange={(e) => setCompany(e.target.value)}
+                value={content}
+                onChange={(e) => setContent(e.target.value)}
             />
+
             <input
                 type="button"
                 value="Update Product"
