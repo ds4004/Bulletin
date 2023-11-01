@@ -32,7 +32,7 @@ const ProductList = () => {
       <div className="row">
         {contents.length > 0 ? contents.map((item, index) => (
           <div className="cards" key={item._id}>
-            <div className="flip-card-inner" key={item._id}>
+            <div className="flip-card-inner">
               <div className="flip-card-front">
                 <div className="card_content">
                   <h2 className="card_title">{item.title}</h2>

@@ -8,7 +8,7 @@ body {
 }
 
 .product-list-div {
-  max-width: 1200px;
+  max-width: 1300px;
   text-align: center;
   margin: 0 auto;
   margin-top: 50px;
@@ -22,11 +22,11 @@ body {
 }
 
 .cards {
-  height: 280px;
-  width: 375px;
+  height: 290px;
+  width: 380px;
   background: #bbb;
   text-align: center;
-  margin: 5px 2px;
+  margin: 5px 20px;
   position: relative;
   perspective: 1000px;
   border-radius: 10px;
@@ -36,8 +36,8 @@ body {
 }
 
 .flip-card-inner {
-  height: 280px;
-  width: 375px;
+  height: 290px;
+  width: 380px;
   transition: transform 1s;
   transform-style: preserve-3d;
   border-radius: 10px;
