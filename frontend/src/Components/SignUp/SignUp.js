@@ -30,40 +30,40 @@ const SignUp = () => {
     result = await result.json();
     console.log(result);
     localStorage.setItem("user", JSON.stringify(result));
-    
+
     if (result) {
       Navigate("/");
     }
   };
-  
+
   return (
     <div className="reg-form">
       <h1 className="heading">Sign Up</h1>
       <div className="inputBox">
-      <input
-        type="text"
-        placeholder="Enter Name"
-        onChange={(e) => setName(e.target.value)}
-        className="reg-input"
-      />
+        <input
+          type="text"
+          placeholder="Enter Name"
+          onChange={(e) => setName(e.target.value)}
+          className="reg-input"
+        />
       </div>
 
       <div className="inputBox">
-      <input
-        type="email"
-        placeholder="Enter Email"
-        onChange={(e) => setEmail(e.target.value)}
-        className="reg-input"
-      />
+        <input
+          type="email"
+          placeholder="Enter Email"
+          onChange={(e) => setEmail(e.target.value)}
+          className="reg-input"
+        />
       </div>
-      
+
       <div className="inputBox">
-      <input
-        type="password"
-        placeholder="Enter Password"
-        onChange={(e) => setPassword(e.target.value)}
-        className="reg-input"
-      />
+        <input
+          type="password"
+          placeholder="Enter Password"
+          onChange={(e) => setPassword(e.target.value)}
+          className="reg-input"
+        />
       </div>
       <input type="button" value="Register" id="reg-submit" onClick={check} />
     </div>

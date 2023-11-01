@@ -1,8 +1,18 @@
-#footer{
+#footer {
     position: absolute;
     bottom: 0;
+    left: 0;
     width: 100%;
     text-align: center;
     background-color: black;
     color: white;
+}
+
+#footer h4 {
+    color: #fff;
+    letter-spacing: .12rem;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 0px;
+    margin: 11px;
 }

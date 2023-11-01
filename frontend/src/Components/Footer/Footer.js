@@ -1,10 +1,10 @@
 import React from 'react'
 import './Footer.css'
 
-const Footer=()=>{
-    return(
+const Footer = () => {
+    return (
         <div id='footer'>
-            <h1>Document Footer</h1>
+            <h4>The footer of website.</h4>
         </div>
     )
 }

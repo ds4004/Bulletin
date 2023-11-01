@@ -43,23 +43,23 @@ const Login = () => {
     <div className="signin-form">
       <h1 className="heading">Login</h1>
       <div className="inputBox">
-      <input
-        type="email"
-        placeholder="Enter Email"
-        onChange={(e) => setEmail(e.target.value)}
-        className="signin-input"
-      />
+        <input
+          type="email"
+          placeholder="Enter Email"
+          onChange={(e) => setEmail(e.target.value)}
+          className="signin-input"
+        />
       </div>
 
       <div className="inputBox">
-      <input
-        type="password"
-        placeholder="Enter Password"
-        onChange={(e) => setPassword(e.target.value)}
-        className="signin-input"
-      />
+        <input
+          type="password"
+          placeholder="Enter Password"
+          onChange={(e) => setPassword(e.target.value)}
+          className="signin-input"
+        />
       </div>
-      
+
       <input
         type="button"
         value="Sign in"

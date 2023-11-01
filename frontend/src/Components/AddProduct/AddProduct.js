@@ -38,49 +38,49 @@ const AddProduct = () => {
     <div className="prod-form">
       <h1 className="heading">Add Content</h1>
       <div className="inputBox">
-      <input
-        type="text"
-        placeholder="Enter Title"
-        className="prod-input"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      {error && !title ? (
-        <span className="invalid-input">Enter valid title</span>
-      ) : (
-        <></>
-      )}
+        <input
+          type="text"
+          placeholder="Enter Title"
+          className="prod-input"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        {error && !title ? (
+          <span className="invalid-input">Enter valid title</span>
+        ) : (
+          <></>
+        )}
       </div>
 
       <div className="inputBox">
-      <input
-        type="text"
-        placeholder="Enter Category"
-        className="prod-input"
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
-      />
-      {error && !category ? (
-        <span className="invalid-input">Enter category</span>
-      ) : (
-        <></>
-      )}
+        <input
+          type="text"
+          placeholder="Enter Category"
+          className="prod-input"
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+        />
+        {error && !category ? (
+          <span className="invalid-input">Enter category</span>
+        ) : (
+          <></>
+        )}
       </div>
 
       <div className="inputBox">
-      <textarea
-        rows="4"
-        placeholder="Enter Content"
-        className="prod-input"
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-      >
-      {error && !content ? (
-        <span className="invalid-input">Enter valid content</span>
-      ) : (
-        <></>
-      )}
-      </textarea>
+        <textarea
+          rows="4"
+          placeholder="Enter Content"
+          className="prod-box"
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+        >
+          {error && !content ? (
+            <span className="invalid-input">Enter valid content</span>
+          ) : (
+            <></>
+          )}
+        </textarea>
       </div>
       <input
         type="button"

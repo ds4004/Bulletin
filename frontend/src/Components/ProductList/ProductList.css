@@ -1,91 +1,115 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-html {
-    background-color: #ecf9ff;
+:root {
+  --color: #000000;
 }
 
 body {
-    color: #272727;
-    font-family: 'Quicksand', serif;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 0;
-    padding: 1rem;
+  font-family: 'Quicksand', serif;
+  padding: 0.8rem;
 }
 
 .product-list-div {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
-.product-list-div {
-    text-align: center;
-    margin-top: 50px;
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  height: 280px;
+  width: 375px;
+  background: #bbb;
+  text-align: center;
+  margin: 5px 2px;
+  position: relative;
+  perspective: 1000px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.product-list {
-    display: flex;
-    padding: 1rem;
+.flip-card-inner {
+  height: 280px;
+  width: 375px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-@media (min-width: 40rem) {
-    .product-list {
-        width: 50%;
-    }
+.flip-card-front,
+.flip-card-back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-@media (min-width: 56rem) {
-    .product-list {
-        width: 33.3333%;
-    }
+.flip-card-back {
+  transform: rotateY(180deg);
 }
 
-.card {
-    background-color: white;
-    border-radius: 0.25rem;
-    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+.flip-card-inner:hover {
+  transform: rotateY(180deg);
 }
 
 .card_content {
-    padding: 1rem;
-    background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
-}
-
-.card_title {
-    color: #000000;
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin: 0px;
-}
-
-.posted_by {
-    color: #000000;
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin: 0px;
+  background-color: #c08484;
+  height: 100%;
+  width: 100%;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .card_text {
-    color: #000000;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    margin-bottom: 1.25rem;
-    font-weight: 400;
+  background-color: #c08484;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  color: black;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: justify;
+}
+
+.card_title {
+  font-size: 2rem;
+  color: #000;
+}
+
+.posted_by {
+  font-size: 1.8rem;
+  color: var(--color);
+}
+
+.del-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+@media (max-width:768px) {
+  .row {
+    flex-flow: column;
+  }
 }

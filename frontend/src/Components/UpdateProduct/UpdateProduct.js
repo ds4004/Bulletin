@@ -43,33 +43,33 @@ const UpdateProduct = () => {
         <div className="prod-form">
             <h1 className="heading">Update Post</h1>
             <div className="inputBox">
-            <input
-                type="text"
-                placeholder="Enter Title"
-                className="prod-input"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-            />
+                <input
+                    type="text"
+                    placeholder="Enter Title"
+                    className="prod-input"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                />
             </div>
 
             <div className="inputBox">
-            <input
-                type="text"
-                placeholder="Enter Category"
-                className="prod-input"
-                value={category}
-                onChange={(e) => setCategory(e.target.value)}
-            />
+                <input
+                    type="text"
+                    placeholder="Enter Category"
+                    className="prod-input"
+                    value={category}
+                    onChange={(e) => setCategory(e.target.value)}
+                />
             </div>
 
             <div className="inputBox">
-            <textarea
-                rows="4"
-                placeholder="Enter Content"
-                className="prod-input"
-                value={content}
-                onChange={(e) => setContent(e.target.value)}
-            />
+                <textarea
+                    rows="4"
+                    placeholder="Enter Content"
+                    className="prod-input"
+                    value={content}
+                    onChange={(e) => setContent(e.target.value)}
+                />
             </div>
 
             <input
