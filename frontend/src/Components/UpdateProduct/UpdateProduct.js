@@ -66,7 +66,7 @@ const UpdateProduct = () => {
                 <textarea
                     rows="4"
                     placeholder="Enter Content"
-                    className="prod-input"
+                    className="prod-box"
                     value={content}
                     onChange={(e) => setContent(e.target.value)}
                 />
