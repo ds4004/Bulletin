@@ -1,19 +1,57 @@
-.nav-ul{
-    padding: 5px;
-    margin: 0px;
+body {
+    overflow-x: hidden;
+}
+
+.navbar {
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.nav-ul {
     background-color: black;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-ul li {
     display: inline-block;
     padding: 10px;
+    margin: 0 0.7rem;
 }
 
-.nav-ul li a{
+.nav-ul li a {
     text-decoration: none;
     color: white;
 }
 
-.nav-right{
+
+.nav-right {
+    background-color: black;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-right li {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 0.7rem;
+}
+
+.nav-right li a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-right {
     text-align: right;
 }

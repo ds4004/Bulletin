@@ -6,24 +6,19 @@ const Nav = () => {
   const auth = localStorage.getItem('user');
   const navigate = useNavigate();
   const logout = () => {
-    // console.log('user Logout');
     localStorage.clear();
     navigate('/signup');
   };
   return (
-    <div>
-
+    <div className='navbar'>
       {
         auth ? (
           <ul className='nav-ul'>
             <li>
-              <Link to='/'>Product</Link>
+              <Link to='/'>News</Link>
             </li>
             <li>
-              <Link to='/add'>Add Product</Link>
-            </li>
-            <li>
-              <Link to='/update'>Update Product</Link>
+              <Link to='/add'>Add Post</Link>
             </li>
             <li>
               <Link to='/profile'>Profile</Link>
@@ -35,7 +30,7 @@ const Nav = () => {
             </li>
           </ul>
         ) : (
-          <ul className='nav-ul nav-right'>
+          <ul className='nav-right'>
             <li>
               <Link to='/signup'>SignUp</Link>
             </li>
