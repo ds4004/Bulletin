@@ -4,6 +4,7 @@ import "./ProductList.css";
 
 const ProductList = () => {
   const [contents, setContent] = useState([]);
+  const [flipStates, setFlipStates] = useState([]);
 
   useEffect(() => {
     getContent();
@@ -13,6 +14,13 @@ const ProductList = () => {
     let result = await fetch(`http://localhost:5000/contents`);
     result = await result.json();
     setContent(result);
+    setFlipStates(new Array(result.length).fill(false));
+  };
+
+  const toggleFlip = (index) => {
+    const newFlipStates = [...flipStates];
+    newFlipStates[index] = !newFlipStates[index];
+    setFlipStates(newFlipStates);
   };
 
   const deleteContent = async (id) => {
@@ -32,7 +40,7 @@ const ProductList = () => {
       <div className="row">
         {contents.length > 0 ? contents.map((item, index) => (
           <div className="cards" key={item._id}>
-            <div className="flip-card-inner">
+            <div className={`flip-card-inner ${flipStates[index] ? "flipped" : ""}`} onClick={() => toggleFlip(index)}>
               <div className="flip-card-front">
                 <div className="card_content">
                   <h2 className="card_title">{item.title}</h2>

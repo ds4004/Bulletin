@@ -64,7 +64,7 @@ body {
   transform: rotateY(180deg);
 }
 
-.flip-card-inner:hover {
+.flip-card-inner.flipped {
   transform: rotateY(180deg);
 }
 
