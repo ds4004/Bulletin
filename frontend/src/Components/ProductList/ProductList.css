@@ -116,6 +116,9 @@ body {
   justify-content: center;
   gap: 3vw;
   padding-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+  left : 10px;
 }
 
 .update-link,

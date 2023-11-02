@@ -43,19 +43,19 @@ const ProductList = () => {
             <div className={`flip-card-inner ${flipStates[index] ? "flipped" : ""}`} onClick={() => toggleFlip(index)}>
               <div className="flip-card-front">
                 <div className="card_content">
-                <div className="content-contaier">
-                  <h2 className="card_title">{item.title}</h2>
-                  <h4 className="posted_by">{item.category}</h4>
-                </div>
+                  <div className="content-contaier">
+                    <h2 className="card_title">{item.title}</h2>
+                    <h4 className="posted_by">{item.category}</h4>
+                  </div>
                   <div className="button-container">
-                  <input
-                    type="button"
-                    value="Delete"
-                    className="del-button"
-                    onClick={() => deleteContent(item._id)}
-                  />
-                  <Link to={"/update/" + item._id} className="update-link">Update</Link>
-                </div>
+                    <input
+                      type="button"
+                      value="Delete"
+                      className="del-button"
+                      onClick={() => deleteContent(item._id)}
+                    />
+                    <Link to={"/update/" + item._id} className="update-link">Update</Link>
+                  </div>
                 </div>
               </div>
               <div className="flip-card-back">
