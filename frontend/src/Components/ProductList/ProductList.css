@@ -1,10 +1,10 @@
-:root {
-  --color: #000000;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 body {
   font-family: 'Quicksand', serif;
   padding: 0.8rem;
+  letter-spacing: 0.5px;
+  background: #ecf3f7;
 }
 
 .product-list-div {
@@ -12,6 +12,7 @@ body {
   text-align: center;
   margin: 0 auto;
   margin-top: 6.5vh;
+  color: #042b45;
 }
 
 .row {
@@ -24,7 +25,7 @@ body {
 .cards {
   height: 38vh;
   width: 24.8vw;
-  background: #bbb;
+  background: #aea7a7;
   text-align: center;
   margin: 2vh 1.6vw;
   position: relative;
@@ -70,35 +71,37 @@ body {
 }
 
 .card_content {
-  background-color: #c08484;
+  background-image: linear-gradient(to bottom right, #03304e, #3d9dde);
   height: 100%;
   width: 100%;
-  color: black;
+  color: white;
   border-radius: 10px;
   box-sizing: border-box;
   overflow: auto;
+  align-items: center;
 }
 
 .card_text {
-  background-color: #c08484;
+  background-image: linear-gradient(to bottom right, #3d9dde, #03304e);
   height: 100%;
   width: 100%;
   border-radius: 10px;
-  color: black;
+  color: white;
   padding: 10px;
   box-sizing: border-box;
   text-align: justify;
   overflow: auto;
+  font-weight: 100;
 }
 
 .card_title {
   padding: 0 10px;
   font-size: 1.3rem;
-  color: #000;
+  color: white;
   text-align: justify;
 }
 
-.card_title::after{
+.card_title::after {
   content: '....';
 }
 
@@ -107,8 +110,9 @@ body {
   margin-top: -11px;
   font-size: 1rem;
   padding: 0 10px;
-  color: var(--color);
+  color: white;
   text-align: center;
+  font-weight: 500;
 }
 
 .button-container {
@@ -117,14 +121,17 @@ body {
   gap: 3vw;
   padding-bottom: 10px;
   position: absolute;
-  bottom: 0;
-  left : 10px;
+  bottom: 10px;
+  align-items: center;
+  left: 0;
+  right: 0;
 }
+
 
 .update-link,
 .del-button {
-  background-image: linear-gradient(to bottom right, #bbb, rgb(66, 77, 84));
-  color: black;
+  background-image: linear-gradient(to bottom right, #353232, rgb(106, 108, 110));
+  color: whitesmoke;
   padding: 5px;
   cursor: pointer;
   border-radius: 6px;
@@ -152,7 +159,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
   }
-  
+
   .flip-card-inner {
     height: 300px;
     width: 260px;
@@ -163,7 +170,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
   }
-  
+
   .flip-card-front,
   .flip-card-back {
     height: 100%;
@@ -178,16 +185,16 @@ body {
     cursor: pointer;
     overflow: hidden;
   }
-  
-  
+
+
   .flip-card-back {
     transform: rotateY(180deg);
   }
-  
+
   .flip-card-inner.flipped {
     transform: rotateY(180deg);
   }
-  
+
   .card_content {
     background-color: #c08484;
     height: 100%;
@@ -197,7 +204,7 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  
+
   .card_text {
     background-color: #c08484;
     height: 100%;
@@ -225,7 +232,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
   }
-  
+
   .flip-card-inner {
     height: 250px;
     width: 280px;
@@ -236,7 +243,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
   }
-  
+
   .flip-card-front,
   .flip-card-back {
     height: 100%;
@@ -251,16 +258,16 @@ body {
     cursor: pointer;
     overflow: hidden;
   }
-  
-  
+
+
   .flip-card-back {
     transform: rotateY(180deg);
   }
-  
+
   .flip-card-inner.flipped {
     transform: rotateY(180deg);
   }
-  
+
   .card_content {
     background-color: #c08484;
     height: 100%;
@@ -270,7 +277,7 @@ body {
     box-sizing: border-box;
     overflow: hidden;
   }
-  
+
   .card_text {
     background-color: #c08484;
     height: 100%;

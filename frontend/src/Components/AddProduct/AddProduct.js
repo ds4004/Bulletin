@@ -12,7 +12,6 @@ const AddProduct = () => {
       setError(true);
       return false;
     }
-    // console.warn(title, category, content);
 
     let userId = JSON.parse(localStorage.getItem("user"));
     console.log(userId._id);

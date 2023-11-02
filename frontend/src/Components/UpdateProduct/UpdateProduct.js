@@ -15,8 +15,6 @@ const UpdateProduct = () => {
     const getProductDetails = async () => {
         let result = await fetch(`http://localhost:5000/content/${params.id}`);
         result = await result.json();
-        // console.log(result);
-
         setTitle(result.title);
         setCategory(result.category);
         setContent(result.content);

@@ -5,7 +5,7 @@ const PrivateComponent = () => {
     const auth = localStorage.getItem('user');
 
     // An <Outlet> should be used in parent route elements to render their child route elements.
-    return auth ? <Outlet />:<Navigate to="/signup" />
+    return auth ? <Outlet /> : <Navigate to="/signup" />
 }
 
 export default PrivateComponent;

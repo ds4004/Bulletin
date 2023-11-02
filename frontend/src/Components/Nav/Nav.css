@@ -9,7 +9,7 @@
 }
 
 .nav-ul {
-    background-color: black;
+    background-color: #042b45;
     list-style-type: none;
     display: flex;
     justify-content: flex-start;
@@ -30,7 +30,7 @@
 
 
 .nav-right {
-    background-color: black;
+    background-color: #042b45;
     list-style-type: none;
     display: flex;
     justify-content: flex-end;
