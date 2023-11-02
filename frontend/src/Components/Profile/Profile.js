@@ -23,7 +23,7 @@ export default function Profile() {
                     </div>
                     <div className="profile-details">
                         <h1 className="profile-name">Name: {user.name}</h1>
-                        <p className="profile-email">Email address: {user.email}</p>
+                        <p className="profile-email">Email Id: {user.email}</p>
                         <div className="profile-extra-details">
                             <h3>Papers published: 10</h3>
                         </div>

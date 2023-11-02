@@ -25,7 +25,7 @@ body {
 .cards {
   height: 38vh;
   width: 24.8vw;
-  background: #aea7a7;
+  background: #61acde;
   text-align: center;
   margin: 2vh 1.6vw;
   position: relative;
@@ -121,7 +121,7 @@ body {
   gap: 3vw;
   padding-bottom: 10px;
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   align-items: center;
   left: 0;
   right: 0;
