@@ -18,14 +18,14 @@ export default function Profile() {
                                 <FontAwesomeIcon icon={faEdit} className="edit-icon" />
                             </div>
                         ) : (
-                            <img src={image} alt="React Image" className='profile-img' />
+                            <img src={image} alt="React" className='profile-img' />
                         )}
                     </div>
                     <div className="profile-details">
                         <h1 className="profile-name">Name: {user.name}</h1>
                         <p className="profile-email">Email Id: {user.email}</p>
                         <div className="profile-extra-details">
-                            <h3>Papers published: 10</h3>
+                            <h3>News Posted: 10</h3>
                         </div>
                     </div>
                 </div>
