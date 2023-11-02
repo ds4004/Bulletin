@@ -1,18 +1,26 @@
-#footer {
-    position: absolute;
+.container {
+    min-height: 21vh;
+    position: relative;
+    padding-bottom: 60px;
+    padding-left: 0px;
+  }
+  
+  #footer {
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     text-align: center;
     background-color: black;
     color: white;
-}
-
-#footer h4 {
+  }
+  
+  #footer h4 {
     color: #fff;
-    letter-spacing: .12rem;
+    letter-spacing: 0.12rem;
     font-weight: 500;
     font-size: 18px;
-    padding: 0px;
+    padding: 0;
     margin: 11px;
-}
+  }
+  

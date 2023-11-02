@@ -8,10 +8,10 @@ body {
 }
 
 .product-list-div {
-  max-width: 1300px;
+  width: 100%;
   text-align: center;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 6.5vh;
 }
 
 .row {
@@ -22,11 +22,11 @@ body {
 }
 
 .cards {
-  height: 290px;
-  width: 380px;
+  height: 38vh;
+  width: 24.8vw;
   background: #bbb;
   text-align: center;
-  margin: 5px 20px;
+  margin: 2vh 1.6vw;
   position: relative;
   perspective: 1000px;
   border-radius: 10px;
@@ -36,8 +36,8 @@ body {
 }
 
 .flip-card-inner {
-  height: 290px;
-  width: 380px;
+  height: 38vh;
+  width: 24.8vw;
   transition: transform 1s;
   transform-style: preserve-3d;
   border-radius: 10px;
@@ -56,8 +56,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
   box-sizing: border-box;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .flip-card-back {
@@ -74,8 +75,8 @@ body {
   width: 100%;
   color: black;
   border-radius: 10px;
-  padding: 10px;
   box-sizing: border-box;
+  overflow: auto;
 }
 
 .card_text {
@@ -87,29 +88,195 @@ body {
   padding: 10px;
   box-sizing: border-box;
   text-align: justify;
+  overflow: auto;
 }
 
 .card_title {
-  font-size: 2rem;
+  padding: 0 10px;
+  font-size: 1.3rem;
   color: #000;
+  text-align: justify;
+}
+
+.card_title::after{
+  content: '....';
 }
 
 .posted_by {
-  font-size: 1.8rem;
+  position: relative;
+  margin-top: -11px;
+  font-size: 1rem;
+  padding: 0 10px;
   color: var(--color);
+  text-align: center;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 3vw;
+  padding-bottom: 10px;
+}
+
+.update-link,
 .del-button {
-  background-color: red;
-  color: white;
-  border: none;
-  padding: 5px 10px;
+  background-image: linear-gradient(to bottom right, #bbb, rgb(66, 77, 84));
+  color: black;
+  padding: 5px;
   cursor: pointer;
-  margin: 5px;
+  border-radius: 6px;
+  border: none;
+  z-index: 10;
+  text-align: center;
+  width: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Quicksand', serif;
 }
 
-@media (max-width:768px) {
-  .row {
-    flex-flow: column;
+@media (max-width:1000px) {
+
+  .cards {
+    height: 300px;
+    width: 260px;
+    background: #bbb;
+    text-align: center;
+    margin: 2vh 1.6vw;
+    position: relative;
+    perspective: 1000px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .flip-card-inner {
+    height: 300px;
+    width: 260px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-inner.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .card_content {
+    background-color: #c08484;
+    height: 100%;
+    width: 100%;
+    color: black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .card_text {
+    background-color: #c08484;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: justify;
+    overflow: auto;
+  }
+}
+
+@media (max-height:700px) {
+  .cards {
+    height: 250px;
+    width: 280px;
+    background: #bbb;
+    text-align: center;
+    margin: 2vh 1.6vw;
+    position: relative;
+    perspective: 1000px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .flip-card-inner {
+    height: 250px;
+    width: 280px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-inner.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .card_content {
+    background-color: #c08484;
+    height: 100%;
+    width: 100%;
+    color: black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .card_text {
+    background-color: #c08484;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: justify;
+    overflow: auto;
   }
 }
