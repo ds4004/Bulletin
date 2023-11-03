@@ -20,7 +20,7 @@ const SignUp = () => {
     let count = 0;
     console.log(name, email, password, count);
 
-    let result = await fetch("http://localhost:5000/register", {
+    let result = await fetch("https://bulletin-main-api.vercel.app/register", {
       method: "POST",
       body: JSON.stringify({ name, email, password, count }),
       headers: {

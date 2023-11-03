@@ -17,7 +17,7 @@ const AddContent = () => {
     console.log(user._id);
     let userId = user._id;
 
-    let result = await fetch("http://localhost:5000/addContent", {
+    let result = await fetch("https://bulletin-main-api.vercel.app/addContent", {
       method: "POST",
       body: JSON.stringify({ title, category, content, userId }),
       headers: {

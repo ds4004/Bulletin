@@ -13,7 +13,7 @@ const UpdateContent = () => {
     }, []);
 
     const getContentDetails = async () => {
-        let result = await fetch(`http://localhost:5000/content/${params.id}`);
+        let result = await fetch(`https://bulletin-main-api.vercel.app/content/${params.id}`);
         result = await result.json();
         setTitle(result.title);
         setCategory(result.category);
@@ -23,7 +23,7 @@ const UpdateContent = () => {
     const updateProd = async () => {
         console.log(title, category, content);
 
-        let result = await fetch(`http://localhost:5000/content/${params.id}`, {
+        let result = await fetch(`https://bulletin-main-api.vercel.app/content/${params.id}`, {
             method: "PUT",
             body: JSON.stringify({ title, category, content }),
             headers: {

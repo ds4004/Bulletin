@@ -14,7 +14,7 @@ const ContentList = () => {
     }, []);
 
     const getContent = async () => {
-        let result = await fetch(`http://localhost:5000/contents`);
+        let result = await fetch(`https://bulletin-main-api.vercel.app/contents`);
         result = await result.json();
         setContent(result);
         setFlipStates(new Array(result.length).fill(false));
@@ -27,7 +27,7 @@ const ContentList = () => {
     };
 
     const deleteContent = async (id) => {
-        let result = await fetch(`http://localhost:5000/deleteContent/${userId}/${id}`, {
+        let result = await fetch(`https://bulletin-main-api.vercel.app/deleteContent/${userId}/${id}`, {
             method: "Delete"
         });
         result = await result.json();

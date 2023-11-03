@@ -17,7 +17,7 @@ const Login = () => {
   const handleLogin = async () => {
     console.log(email, password);
 
-    let result = await fetch("http://localhost:5000/login", {
+    let result = await fetch("https://bulletin-main-api.vercel.app/login", {
       // mode: 'no-cors',
       method: "POST",
       body: JSON.stringify({ email, password }),
