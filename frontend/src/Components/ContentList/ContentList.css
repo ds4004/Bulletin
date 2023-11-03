@@ -149,7 +149,7 @@ body {
     .cards {
         height: 300px;
         width: 260px;
-        background: #bbb;
+        /* background: #bbb; */
         text-align: center;
         margin: 2vh 1.6vw;
         position: relative;
@@ -232,7 +232,7 @@ body {
     .cards {
         height: 250px;
         width: 280px;
-        background: #bbb;
+        /* background: #bbb; */
         text-align: center;
         margin: 2vh 1.6vw;
         position: relative;
