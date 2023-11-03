@@ -47,7 +47,6 @@ input[type="password"] {
 }
 
 @media (max-width: 768px) {
-
     .reg-form {
         font-size: small;
         padding: 5px;

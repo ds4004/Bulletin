@@ -17,11 +17,12 @@ const SignUp = () => {
   });
 
   const check = async () => {
-    console.log(name, email, password);
+    let count = 0;
+    console.log(name, email, password, count);
 
     let result = await fetch("http://localhost:5000/register", {
       method: "POST",
-      body: JSON.stringify({ name, email, password }),
+      body: JSON.stringify({ name, email, password, count }),
       headers: {
         "Content-Type": "application/json",
       },

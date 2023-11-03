@@ -7,6 +7,7 @@ export default function Profile() {
     let user = JSON.parse(localStorage.getItem("user"));
 
     let image = user.profileImage || "https://reactjs.org/logo-og.png";
+    let count = user.count || 0;
     return (
         <div className="profile-container">
             <div className="card">
@@ -25,7 +26,7 @@ export default function Profile() {
                         <h1 className="profile-name">Name: {user.name}</h1>
                         <p className="profile-email">Email Id: {user.email}</p>
                         <div className="profile-extra-details">
-                            <h3>News Posted: 10</h3>
+                            <h3>News Posted: {count}</h3>
                         </div>
                     </div>
                 </div>

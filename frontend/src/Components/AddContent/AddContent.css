@@ -64,7 +64,6 @@ textarea {
 }
 
 @media (max-width: 768px) {
-
     .prod-form {
         font-size: small;
     }
