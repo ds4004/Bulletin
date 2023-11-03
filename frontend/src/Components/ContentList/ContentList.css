@@ -129,11 +129,9 @@ body {
 
 .update-link,
 .del-button {
-    background-image: linear-gradient(
-        to bottom right,
-        #353232,
-        rgb(106, 108, 110)
-    );
+    background-image: linear-gradient(to bottom right,
+            #353232,
+            rgb(106, 108, 110));
     color: whitesmoke;
     padding: 5px;
     cursor: pointer;
@@ -197,25 +195,36 @@ body {
     }
 
     .card_content {
-        background-color: #c08484;
+        background-image: linear-gradient(to bottom right, #03304e, #3d9dde);
         height: 100%;
         width: 100%;
-        color: black;
+        color: white;
         border-radius: 10px;
         box-sizing: border-box;
-        overflow: hidden;
+        overflow: auto;
+        align-items: center;
     }
-
+    
     .card_text {
-        background-color: #c08484;
+        background-image: linear-gradient(to bottom right, #3d9dde, #03304e);
         height: 100%;
         width: 100%;
         border-radius: 10px;
-        color: black;
+        color: white;
         padding: 10px;
         box-sizing: border-box;
         text-align: justify;
         overflow: auto;
+        font-weight: 100;
+    }
+
+    body {
+        font-family: "Quicksand", serif;
+        padding: 0.8rem;
+        letter-spacing: 0.5px;
+        background: #ecf3f7;
+        margin: 0.8rem;
+        overflow-x: hidden;
     }
 }
 
@@ -269,24 +278,35 @@ body {
     }
 
     .card_content {
-        background-color: #c08484;
+        background-image: linear-gradient(to bottom right, #03304e, #3d9dde);
         height: 100%;
         width: 100%;
-        color: black;
+        color: white;
         border-radius: 10px;
         box-sizing: border-box;
-        overflow: hidden;
+        overflow: auto;
+        align-items: center;
     }
-
+    
     .card_text {
-        background-color: #c08484;
+        background-image: linear-gradient(to bottom right, #3d9dde, #03304e);
         height: 100%;
         width: 100%;
         border-radius: 10px;
-        color: black;
+        color: white;
         padding: 10px;
         box-sizing: border-box;
         text-align: justify;
         overflow: auto;
+        font-weight: 100;
+    }
+
+    body {
+        font-family: "Quicksand", serif;
+        padding: 0.8rem;
+        letter-spacing: 0.5px;
+        background: #ecf3f7;
+        margin-top: 0.8rem;
+        overflow-x: hidden;
     }
 }

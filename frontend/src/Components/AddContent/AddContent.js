@@ -71,7 +71,6 @@ const AddContent = () => {
           <></>
         )}
       </div>
-
       <div className="inputBox">
         <textarea
           rows="4"
