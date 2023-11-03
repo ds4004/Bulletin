@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+body {
+    font-family: "Quicksand", serif;
+    padding: 0.8rem;
+    letter-spacing: 0.5px;
+    background: #ecf3f7;
+}
+
+.content-list-div {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 6.5vh;
+    color: #042b45;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cards {
+    height: 38vh;
+    width: 24.8vw;
+    background: #61acde;
+    text-align: center;
+    margin: 2vh 1.6vw;
+    position: relative;
+    perspective: 1000px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flip-card-inner {
+    height: 38vh;
+    width: 24.8vw;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flip-card-front,
+.flip-card-back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.flip-card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.card_content {
+    background-image: linear-gradient(to bottom right, #03304e, #3d9dde);
+    height: 100%;
+    width: 100%;
+    color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: auto;
+    align-items: center;
+}
+
+.card_text {
+    background-image: linear-gradient(to bottom right, #3d9dde, #03304e);
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: justify;
+    overflow: auto;
+    font-weight: 100;
+}
+
+.card_title {
+    padding: 0 10px;
+    font-size: 1.3rem;
+    color: white;
+    text-align: justify;
+}
+
+.card_title::after {
+    content: "....";
+}
+
+.posted_by {
+    position: relative;
+    margin-top: -11px;
+    font-size: 1rem;
+    padding: 0 10px;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    padding-bottom: 10px;
+    position: absolute;
+    bottom: 15px;
+    align-items: center;
+    left: 0;
+    right: 0;
+}
+
+.update-link,
+.del-button {
+    background-image: linear-gradient(
+        to bottom right,
+        #353232,
+        rgb(106, 108, 110)
+    );
+    color: whitesmoke;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 6px;
+    border: none;
+    z-index: 10;
+    text-align: center;
+    width: 70px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Quicksand", serif;
+}
+
+@media (max-width: 1000px) {
+    .cards {
+        height: 300px;
+        width: 260px;
+        background: #bbb;
+        text-align: center;
+        margin: 2vh 1.6vw;
+        position: relative;
+        perspective: 1000px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .flip-card-inner {
+        height: 300px;
+        width: 260px;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .flip-card-back {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-inner.flipped {
+        transform: rotateY(180deg);
+    }
+
+    .card_content {
+        background-color: #c08484;
+        height: 100%;
+        width: 100%;
+        color: black;
+        border-radius: 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .card_text {
+        background-color: #c08484;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        color: black;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: justify;
+        overflow: auto;
+    }
+}
+
+@media (max-height: 700px) {
+    .cards {
+        height: 250px;
+        width: 280px;
+        background: #bbb;
+        text-align: center;
+        margin: 2vh 1.6vw;
+        position: relative;
+        perspective: 1000px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .flip-card-inner {
+        height: 250px;
+        width: 280px;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .flip-card-back {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-inner.flipped {
+        transform: rotateY(180deg);
+    }
+
+    .card_content {
+        background-color: #c08484;
+        height: 100%;
+        width: 100%;
+        color: black;
+        border-radius: 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .card_text {
+        background-color: #c08484;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        color: black;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: justify;
+        overflow: auto;
+    }
+}

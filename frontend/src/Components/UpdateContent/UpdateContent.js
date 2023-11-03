@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom"
 
-const UpdateProduct = () => {
+const UpdateContent = () => {
     const [title, setTitle] = useState("");
     const [category, setCategory] = useState("");
     const [content, setContent] = useState("");
@@ -9,10 +9,10 @@ const UpdateProduct = () => {
     const Navigate = useNavigate();
 
     useEffect(() => {
-        getProductDetails();
+        getContentDetails();
     }, []);
 
-    const getProductDetails = async () => {
+    const getContentDetails = async () => {
         let result = await fetch(`http://localhost:5000/content/${params.id}`);
         result = await result.json();
         setTitle(result.title);
@@ -80,4 +80,4 @@ const UpdateProduct = () => {
     );
 };
 
-export default UpdateProduct;
+export default UpdateContent;

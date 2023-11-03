@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./AddProduct.css";
+import "./AddContent.css";
 
-const AddProduct = () => {
+const AddContent = () => {
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
   const [content, setContent] = useState("");
@@ -13,9 +13,9 @@ const AddProduct = () => {
       return false;
     }
 
-    let userId = JSON.parse(localStorage.getItem("user"));
-    console.log(userId._id);
-    userId = userId._id;
+    let user = JSON.parse(localStorage.getItem("user"));
+    console.log(user._id);
+    let userId = user._id;
 
     let result = await fetch("http://localhost:5000/addContent", {
       method: "POST",
@@ -31,6 +31,12 @@ const AddProduct = () => {
     setCategory("");
     setContent("");
     console.log(title);
+
+    // user = user ? user : {};
+    let count = user.count;
+    console.log(user['count'], count);
+    user['count'] = count+1;
+    localStorage.setItem('user', JSON.stringify(user));
   };
 
   return (
@@ -91,4 +97,4 @@ const AddProduct = () => {
   );
 };
 
-export default AddProduct;
+export default AddContent;
