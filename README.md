@@ -1,11 +1,20 @@
 # E-dashboard
-
 A complete MERN project.
 
 
+
+# Hi, I'm Dhrumi! 👋
+
+
 ## 🚀 About Me
-I am currently a B.tech student at Sardar Vallabhbhai National Institute of Technology (NIT Surat).
-
-
+I'm a full stack developer...
 ## 🛠 Skills
-React.js, Nodejs, MongoDB
+MongoDB, Express, React, Node
+
+## Team
+Dhrumi Shah - https://github.com/ds4004
+
+Bansi Marakana - https://github.com/Bansi-Marakana
+## 🔗 Deployed link
+https://github.com/ds4004/Bulletin
+
