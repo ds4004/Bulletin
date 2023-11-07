@@ -1,7 +1,7 @@
 # E-dashboard
+An inclusive community platform that enables individuals to share the latest news and events, while also offering open access to this content for all community members.
+
 A complete MERN project.
-
-
 
 # Hi, I'm Dhrumi! 👋
 
